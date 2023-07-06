@@ -1,0 +1,10 @@
+name: secondworkflow
+on: workflow_dispatch
+jobs:
+  secondjob:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print namaste
+      run: |
+        echo "Namaste India"
+        echo "howdy india"
