@@ -8,5 +8,17 @@ jobs:
         run: echo "Hello World "
       - name: Print goodbye
         run: echo "Done-bye"
-      
+  Deploy-to-Dev:
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - name: deploy
+        run: echo "hey Dev!!"
+          
+  Deploy-to-QA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy2
+        run: echo "hello QA!!"      
+  
   
