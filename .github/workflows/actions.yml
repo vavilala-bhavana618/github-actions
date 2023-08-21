@@ -1,24 +1,16 @@
-name: actions
+name: actions1
 on: workflow_dispatch 
 jobs:
-  firstjob:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print greeting
-        run: echo "Hello World "
-      - name: Print goodbye
-        run: echo "Done-bye"
   Deploy-to-Dev:
     runs-on: ubuntu-latest
     environment: Development
     steps:
       - name: deploy
-        run: echo "hey Dev!!"
-          
+        run: echo "Deploying to Dev"
   Deploy-to-QA:
     runs-on: ubuntu-latest
     steps:
       - name: deploy2
-        run: echo "hello QA!!"      
+        run: echo "Qa deployment in progress"      
   
   
