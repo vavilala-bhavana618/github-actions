@@ -1,16 +1,14 @@
-name: Test project on Actions 
-on: push
+name: actions3
+on: workflow_dispatch 
 jobs:
-  actionjob:
+  Deploy-to-Dev:
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - name: deploy
+        run: echo "Develeopment changes are pushed to Dev env"
+  Deploy-to-Prod:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Code
-        uses: actions/checkout@v3
-      - name: Install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm test
+      - name: deploy2
+        run: echo "Production deployment successful" 
